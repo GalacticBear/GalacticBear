@@ -39,6 +39,4 @@ Computer Science Engineering student focused on building intelligent web applica
 
 ### 🌐 Connect With Me
 
-- 💼 **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com)
-- ✉️ **Email:** [your-email@example.com](mailto:your-email@example.com)
-- 🌐 **Portfolio / Web:** [your-portfolio.com](https://your-portfolio.com)
+- 💼 **LinkedIn:** [https://www.linkedin.com/in/mukesh-sharma-95a14232a/](https://linkedin.com)
