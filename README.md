@@ -20,8 +20,6 @@ Computer Science Engineering student focused on building intelligent web applica
   *An AI-driven platform tailored for career preparation, resume optimization, and skill benchmarking.*
 - 📊 **[ML & Data Analytics Labs](https://github.com/GalacticBear/AI-Driven-Student-Performance-Prediction-System)**  
   *Practical implementations of machine learning models, sentiment analysis, and data pipelines.*
-- 🔒 **[Security & Utility Tools](https://github.com/GalacticBear)**  
-  *Automated scripts and tools focusing on application utility and system security workflows.*
 
 ---
 
