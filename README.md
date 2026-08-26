@@ -23,18 +23,6 @@ Computer Science Engineering student focused on building intelligent web applica
 
 ---
 
-### 📈 GitHub Stats
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=GalacticBear&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Mukesh's GitHub Stats" />
-</p>
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GalacticBear&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
-
----
-
 ### 🌐 Connect With Me
 
 - 💼 **LinkedIn:** [https://www.linkedin.com/in/mukesh-sharma-95a14232a/](https://linkedin.com)
