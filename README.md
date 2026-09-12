@@ -8,7 +8,7 @@
 
 **Turning data into useful insights and intelligent systems.**
 
-[LinkedIn](https://www.linkedin.com/in/mukesh-sharma-95a14232/) | [GitHub](https://github.com/GalacticBear)
+[LinkedIn](https://www.linkedin.com/in/mukesh-sharma-95a14232a/) | [GitHub](https://github.com/GalacticBear)
 
 </div>
 
