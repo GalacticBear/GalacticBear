@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/profile.svg" alt="Animated ASCII portrait of Mukesh Sharma" width="760">
+<img src="assets/profile.svg" alt="Animated ASCII portrait of Mukesh Sharma" width="280">
 
 # MUKESH SHARMA
 

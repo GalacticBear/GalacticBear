@@ -167,8 +167,8 @@ def generate_ascii_svg(
     source_path,
     output_path,
     columns=180,
-    display_width=500,
-    font_size=6.5
+    display_width=2800,
+    font_size=3.6
 ):
     image = Image.open(
         source_path
