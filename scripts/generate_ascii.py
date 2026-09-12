@@ -78,7 +78,7 @@ def generate_ascii_svg(source_path, output_path, columns=90, display_width=460, 
     out.append("</defs>")
     for i, row in enumerate(rows):
         y = 12 + i * line_height
-        out.append(f'<text x="0" y="{y:.2f}" font-family="JBMonoEmbedded,monospace" font-size="{font_size}px" xml:space="preserve" clip-path="url(#r{i})" fill="currentColor">{html.escape(row)}</text>')
-    out.append(f'<rect width="{char_width:.2f}" height="{font_size:.2f}" fill="currentColor"><animate attributeName="y" from="12" to="{12+(len(rows)-1)*line_height:.2f}" dur="{duration:.2f}s" fill="freeze"/><animate attributeName="x" from="0" to="{max(total_width-char_width,0):.2f}" dur="{duration:.2f}s" fill="freeze"/></rect>')
+        out.append(f'<text x="0" y="{y:.2f}" font-family="JBMonoEmbedded,monospace" font-size="{font_size}px" xml:space="preserve" clip-path="url(#r{i})" fill="#f0f6fc">{html.escape(row)}</text>')
+    out.append(f'<rect width="{char_width:.2f}" height="{font_size:.2f}" fill="#f0f6fc"><animate attributeName="y" from="12" to="{12+(len(rows)-1)*line_height:.2f}" dur="{duration:.2f}s" fill="freeze"/><animate attributeName="x" from="0" to="{max(total_width-char_width,0):.2f}" dur="{duration:.2f}s" fill="freeze"/></rect>')
     out.append("</svg>")
     output_path.write_text("\n".join(out), encoding="utf-8")
