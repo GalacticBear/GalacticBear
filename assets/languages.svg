@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+width="760" height="327" viewBox="0 0 760 327"
+role="img" aria-label="Programming languages used in public repositories">
+
+<rect x="0" y="0" width="760" height="327" rx="14"
+fill="#0d1117" stroke="#30363d"/>
+
+<text x="30" y="30"
+font-family="monospace" font-size="16"
+fill="#8b949e">PUBLIC REPOSITORY LANGUAGES</text>
+
+
+            <text x="30" y="58"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">Jupyter Notebook</text>
+
+            <rect x="180" y="45"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="45"
+            width="344.6" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="58"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">78.3%</text>
+            
+            <text x="30" y="100"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">Python</text>
+
+            <rect x="180" y="87"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="87"
+            width="52.3" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="100"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">11.9%</text>
+            
+            <text x="30" y="142"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">JavaScript</text>
+
+            <rect x="180" y="129"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="129"
+            width="41.5" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="142"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">9.4%</text>
+            
+            <text x="30" y="184"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">Dockerfile</text>
+
+            <rect x="180" y="171"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="171"
+            width="0.9" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="184"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">0.2%</text>
+            
+            <text x="30" y="226"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">HTML</text>
+
+            <rect x="180" y="213"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="213"
+            width="0.4" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="226"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">0.1%</text>
+            
+            <text x="30" y="268"
+            font-family="monospace"
+            font-size="14"
+            fill="#f0f6fc">CSS</text>
+
+            <rect x="180" y="255"
+            width="440" height="12" rx="6"
+            fill="#21262d"/>
+
+            <rect x="180" y="255"
+            width="0.3" height="12" rx="6"
+            fill="#58a6ff"/>
+
+            <text x="650" y="268"
+            font-family="monospace"
+            font-size="13"
+            fill="#8b949e">0.1%</text>
+            
+
+</svg>

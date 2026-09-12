@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+width="760" height="180" viewBox="0 0 760 180"
+role="img" aria-label="GitHub contribution streak statistics">
+
+<rect x="0" y="0" width="760" height="180" rx="14"
+fill="#0d1117" stroke="#30363d"/>
+
+<text x="30" y="40"
+font-family="monospace" font-size="16"
+fill="#8b949e">CONTRIBUTION STREAKS</text>
+
+<text x="30" y="105"
+font-family="monospace" font-size="38"
+font-weight="700"
+fill="#f0f6fc">0</text>
+
+<text x="30" y="132"
+font-family="monospace" font-size="14"
+fill="#8b949e">current streak</text>
+
+<text x="390" y="105"
+font-family="monospace" font-size="38"
+font-weight="700"
+fill="#f0f6fc">3</text>
+
+<text x="390" y="132"
+font-family="monospace" font-size="14"
+fill="#8b949e">longest streak</text>
+
+</svg>
