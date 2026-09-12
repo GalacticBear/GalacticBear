@@ -192,7 +192,7 @@ def generate_ascii_svg(
     )
 
     # GitHub dark-mode friendly.
-    PORTRAIT_COLOR = "#f0f6fc"
+    PORTRAIT_COLOR = "#787b7e"
 
     out = [
         '<?xml version="1.0" encoding="UTF-8"?>',
