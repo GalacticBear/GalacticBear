@@ -13,8 +13,8 @@ except Exception:
     remove = None
 
 
-# More tonal levels = more facial detail.
-RAMP = " .,:;irsXA253hMHGS#9B&@"
+# High-detail ASCII ramp.
+RAMP = " .'`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
 
 def remove_background(image):
@@ -49,40 +49,52 @@ def process_grayscale(rgba):
     rgb = arr[:, :, :3].copy()
     alpha = arr[:, :, 3]
 
-    # Make the transparent background white.
+    # Transparent background becomes white.
     rgb[alpha < 8] = 255
 
-    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    gray = cv2.cvtColor(
+        rgb,
+        cv2.COLOR_RGB2GRAY
+    )
 
-    # Preserve small facial features while reducing noise.
+    # Light smoothing while preserving facial features.
     gray = cv2.bilateralFilter(
         gray,
-        7,
-        35,
-        35
+        5,
+        18,
+        18
     )
 
     # Local contrast enhancement.
     gray = cv2.createCLAHE(
-        clipLimit=2.2,
+        clipLimit=2.0,
         tileGridSize=(8, 8)
     ).apply(gray)
 
-    # Gentle sharpening for eyes, nose, hair and jaw details.
-    blurred = cv2.GaussianBlur(gray, (0, 0), 1.0)
+    # Preserve fine edges.
+    blurred = cv2.GaussianBlur(
+        gray,
+        (0, 0),
+        0.8
+    )
 
     gray = cv2.addWeighted(
         gray,
-        1.25,
+        1.35,
         blurred,
-        -0.25,
+        -0.35,
         0
     )
 
-    # Softer gamma than the previous 1.7.
-    x = gray.astype(np.float32) / 255.0
+    # Preserve more mid-tone information.
+    x = gray.astype(
+        np.float32
+    ) / 255.0
 
-    x = np.power(x, 1.25)
+    x = np.power(
+        x,
+        1.12
+    )
 
     return np.clip(
         x * 255.0,
@@ -91,13 +103,17 @@ def process_grayscale(rgba):
     ).astype(np.uint8)
 
 
-def ascii_rows(gray, columns=120):
+def ascii_rows(gray, columns=180):
     h, w = gray.shape
 
-    # Correct for the visual aspect ratio of monospace characters.
+    # Compensate for monospace character proportions.
     rows = max(
         1,
-        round(columns * (h / w) * 0.48)
+        round(
+            columns
+            * (h / w)
+            * 0.48
+        )
     )
 
     small = cv2.resize(
@@ -106,7 +122,7 @@ def ascii_rows(gray, columns=120):
         interpolation=cv2.INTER_AREA
     )
 
-    # Convert brightness into ASCII density.
+    # Convert brightness to ASCII density.
     idx = np.rint(
         (255 - small)
         / 255.0
@@ -120,7 +136,10 @@ def ascii_rows(gray, columns=120):
     )
 
     return [
-        "".join(RAMP[i] for i in row)
+        "".join(
+            RAMP[i]
+            for i in row
+        )
         for row in idx
     ]
 
@@ -147,9 +166,9 @@ def embedded_font(font_path):
 def generate_ascii_svg(
     source_path,
     output_path,
-    columns=120,
-    display_width=760,
-    font_size=10.2
+    columns=180,
+    display_width=500,
+    font_size=6.5
 ):
     image = Image.open(
         source_path
@@ -159,7 +178,9 @@ def generate_ascii_svg(
         remove_background(image)
     )
 
-    gray = process_grayscale(subject)
+    gray = process_grayscale(
+        subject
+    )
 
     rows = ascii_rows(
         gray,
@@ -172,48 +193,57 @@ def generate_ascii_svg(
         / "JetBrainsMono-Regular.woff2"
     )
 
-    line_height = font_size * 1.02
+    line_height = font_size * 1.03
 
     height = math.ceil(
-        len(rows) * line_height + 16
+        len(rows)
+        * line_height
+        + 14
     )
 
     char_width = font_size * 0.600
 
-    total_width = columns * char_width
+    total_width = (
+        columns
+        * char_width
+    )
 
-    # Slightly slower so the larger portrait
-    # has a readable typing effect.
-    row_delay = 0.075
+    # Typing animation.
+    row_delay = 0.065
 
     duration = max(
         row_delay * len(rows),
         0.1
     )
 
-    # GitHub dark-mode friendly.
+    # Reduced brightness.
     PORTRAIT_COLOR = "#787b7e"
 
     out = [
         '<?xml version="1.0" encoding="UTF-8"?>',
 
         (
-            f'<svg xmlns="http://www.w3.org/2000/svg" '
-            f'viewBox="0 0 {total_width:.2f} {height:.2f}" '
+            f'<svg '
+            f'xmlns="http://www.w3.org/2000/svg" '
+            f'viewBox="0 0 '
+            f'{total_width:.2f} '
+            f'{height:.2f}" '
             f'width="{display_width}" '
             f'role="img" '
             f'aria-label="Animated ASCII portrait" '
             f'style="color:{PORTRAIT_COLOR};">'
         ),
 
-        embedded_font(font_path),
+        embedded_font(
+            font_path
+        ),
 
         "<defs>",
     ]
 
     # Row-by-row reveal animation.
     for i in range(len(rows)):
-        y = 12 + i * line_height
+        y = 10 + i * line_height
 
         out.append(
             f'<clipPath id="r{i}">'
@@ -237,7 +267,7 @@ def generate_ascii_svg(
 
     # ASCII portrait.
     for i, row in enumerate(rows):
-        y = 12 + i * line_height
+        y = 10 + i * line_height
 
         out.append(
             f'<text '
@@ -260,8 +290,8 @@ def generate_ascii_svg(
         f'fill="{PORTRAIT_COLOR}">'
         f'<animate '
         f'attributeName="y" '
-        f'from="12" '
-        f'to="{12+(len(rows)-1)*line_height:.2f}" '
+        f'from="10" '
+        f'to="{10+(len(rows)-1)*line_height:.2f}" '
         f'dur="{duration:.2f}s" '
         f'fill="freeze"/>'
         f'<animate '
