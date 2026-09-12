@@ -217,7 +217,7 @@ def generate_ascii_svg(
     )
 
     # Reduced brightness.
-    PORTRAIT_COLOR = "#f0f6fc"
+    PORTRAIT_COLOR = "#d9dee3"
 
     out = [
         '<?xml version="1.0" encoding="UTF-8"?>',
