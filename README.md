@@ -12,7 +12,6 @@
 
 </div>
 
-
 ## `01 / PROFILE`
 
 Computer Science Engineering student building toward **Data Science, Machine Learning, and AI** roles.
@@ -129,6 +128,7 @@ GENERATIVE AI
           v
 AI ENGINEERING
      build -> evaluate -> deploy
+```
 
 ---
 
@@ -156,6 +156,7 @@ This is the standard I want my future Data Science and AI projects to follow.
 [05] NLP & LLMs
 [06] Generative AI
 [07] MLOps & AI deployment
+```
 
 ---
 
@@ -172,4 +173,3 @@ This is the standard I want my future Data Science and AI projects to follow.
 ---
 
 <sub>Profile activity is generated automatically with Python and GitHub Actions.</sub>
-
