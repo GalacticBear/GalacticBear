@@ -20,13 +20,13 @@ fill="#8b949e">PUBLIC REPOSITORY LANGUAGES</text>
             fill="#21262d"/>
 
             <rect x="180" y="45"
-            width="344.6" height="12" rx="6"
+            width="333.3" height="12" rx="6"
             fill="#58a6ff"/>
 
             <text x="650" y="58"
             font-family="monospace"
             font-size="13"
-            fill="#8b949e">78.3%</text>
+            fill="#8b949e">75.7%</text>
             
             <text x="30" y="100"
             font-family="monospace"
@@ -38,13 +38,13 @@ fill="#8b949e">PUBLIC REPOSITORY LANGUAGES</text>
             fill="#21262d"/>
 
             <rect x="180" y="87"
-            width="52.3" height="12" rx="6"
+            width="65.0" height="12" rx="6"
             fill="#58a6ff"/>
 
             <text x="650" y="100"
             font-family="monospace"
             font-size="13"
-            fill="#8b949e">11.9%</text>
+            fill="#8b949e">14.8%</text>
             
             <text x="30" y="142"
             font-family="monospace"
@@ -56,13 +56,13 @@ fill="#8b949e">PUBLIC REPOSITORY LANGUAGES</text>
             fill="#21262d"/>
 
             <rect x="180" y="129"
-            width="41.5" height="12" rx="6"
+            width="40.1" height="12" rx="6"
             fill="#58a6ff"/>
 
             <text x="650" y="142"
             font-family="monospace"
             font-size="13"
-            fill="#8b949e">9.4%</text>
+            fill="#8b949e">9.1%</text>
             
             <text x="30" y="184"
             font-family="monospace"
